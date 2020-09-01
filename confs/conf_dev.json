@@ -1,0 +1,24 @@
+{
+    "storage": {
+        "sql":{
+            "dbs": {
+                "data_dsn": "pk_web:Udvyw93%dc9i3@tcp(aws-dev-db-v57-read-instance-1.ck7gakvwrblj.ap-east-1.rds.amazonaws.com:3306)/pk_data?charset=utf8&parseTime=True&loc=Local",
+                "gamelog_dsn": "pk_web:Udvyw93%dc9i3@tcp(aws-dev-db-v57.ck7gakvwrblj.ap-east-1.rds.amazonaws.com:3306)/pk_gamelog?charset=utf8&parseTime=True&loc=Local"
+            }
+        },
+        "mgo":{
+            "uri": "",
+            "database": ""
+        },
+        "rds":{
+            "addr": "127.0.0.1:16379",
+            "password": ""
+        }
+    },
+
+    "nats": {
+        "client": "statistics",
+        "cluster": "nats-streaming",
+        "urls": "nats://127.0.0.1:14222,nats://127.0.0.1:24222,nats://127.0.0.1:34222"
+    }
+}

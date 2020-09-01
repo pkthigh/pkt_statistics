@@ -1,0 +1,24 @@
+{
+    "storage": {
+        "sql":{
+            "dbs": {
+                "data_dsn": "pk_web:Udvyw93%dc9i3@tcp(aws-db-prod-instance-2-ap-east-1a.ck7gakvwrblj.ap-east-1.rds.amazonaws.com:3306)/pk_data?charset=utf8&parseTime=True&loc=Local",
+                "gamelog_dsn": "pk_web:Udvyw93%dc9i3@tcp(aws-db-prod-instance-2-ap-east-1a.ck7gakvwrblj.ap-east-1.rds.amazonaws.com:3306)/pk_gamelog?charset=utf8&parseTime=True&loc=Local"
+            }
+        },
+        "mgo":{
+            "uri": "",
+            "database": ""
+        },
+        "rds":{
+            "addr": "prod-activity-redis.ws7efo.ng.0001.ape1.cache.amazonaws.com:6379",
+            "password": ""
+        }
+    },
+
+    "nats": {
+        "client": "statistics",
+        "cluster": "cluster",
+        "urls": "nats://172.31.43.103:4222,nats://172.31.38.215:4222,nats://172.31.38.180:4222"
+    }
+}
