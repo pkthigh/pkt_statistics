@@ -70,21 +70,6 @@ func (nats *Nats) Close() error {
 // Run 运行
 func Run() {
 
-	// 获取上次服务关闭时间
-	// result := src.Store.Rds(common.UpdateNotification).Get("service_close_date")
-	// if result.Err() != nil && result.Err() != redis.Nil {
-	// 	logger.FatalF("get last close time error: %v", result.Err())
-	// }
-
-	// 有上次关闭时间
-	// if result.Err() == nil {
-	// 	ReloadLastCloseDateData(result.Val())
-	// }
-
-	// if result.Err() == redis.Nil {
-	// 	logger.Info("no last close time")
-	// }
-
 	// 处理业务数据
 	go client.register()
 
@@ -92,12 +77,6 @@ func Run() {
 	signals := make(chan os.Signal)
 	signal.Notify(signals, os.Interrupt, os.Kill, syscall.SIGUSR1, syscall.SIGUSR2)
 	<-signals
-
-	// 记录关闭时间
-	// if err := src.Store.Rds(common.UpdateNotification).Set("service_close_date", time.Now().Format("2006-01-02"), 0).Err(); err != nil {
-	// 	logger.ErrorF("close date update error: %v", err)
-	// }
-	// logger.Info("last close time successful")
 
 	if err := client.Close(); err != nil {
 		logger.ErrorF("close client subs error: %v", err)

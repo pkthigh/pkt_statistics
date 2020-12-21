@@ -59,7 +59,7 @@ func TexasHandOverRecordHandler(msg *stan.Msg) {
 		if err := notice.Publish(common.PkcHandOverSubject.String(), player).Err(); err != nil {
 			logger.ErrorF("[德州手数更新通知失败]UpdateNotification failed, Date: %v UserID: %v Err: %v", date, player, err)
 		}
-		// logger.InfoF("[德州手数更新通知成功]UpdateNotification failed, Date: %v UserID: %v", date, player)
+		logger.InfoF("[德州手数更新通知成功]UpdateNotification failed, Date: %v UserID: %v", date, player)
 	}
 
 }
