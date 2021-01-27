@@ -1,21 +1,21 @@
 {
     "storage": {
-        "sql":{
+        "sql": {
             "dbs": {
                 "data_dsn": "pk_web:Udvyw93%dc9i3@tcp(aws-dev-db-v57-read-instance-1.ck7gakvwrblj.ap-east-1.rds.amazonaws.com:3306)/pk_data?charset=utf8&parseTime=True&loc=Local",
-                "gamelog_dsn": "pk_web:Udvyw93%dc9i3@tcp(aws-dev-db-v57.ck7gakvwrblj.ap-east-1.rds.amazonaws.com:3306)/pk_gamelog?charset=utf8&parseTime=True&loc=Local"
+                "gamelog_dsn": "pk_web:Udvyw93%dc9i3@tcp(aws-dev-db-v57.ck7gakvwrblj.ap-east-1.rds.amazonaws.com:3306)/pk_gamelog?charset=utf8&parseTime=True&loc=Local",
+                "activity_dsn_read_only": "pk_web:Udvyw93%dc9i3@tcp(aws-dev-db-v57-read-instance-1.ck7gakvwrblj.ap-east-1.rds.amazonaws.com:3306)/pk_activity_sys?charset=utf8&parseTime=True&loc=Local"
             }
         },
-        "mgo":{
+        "mgo": {
             "uri": "",
             "database": ""
         },
-        "rds":{
+        "rds": {
             "addr": "127.0.0.1:16379",
             "password": ""
         }
     },
-
     "nats": {
         "client": "statistics",
         "cluster": "nats-streaming",

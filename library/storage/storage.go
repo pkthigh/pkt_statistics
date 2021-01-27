@@ -33,6 +33,7 @@ func NewStorage() (*Storage, error) {
 		if err != nil {
 			logger.ErrorF("connect %v error: %v", name, err)
 		}
+		logger.Info(db)
 
 		db.LogMode(true)
 		db.Callback().Create().Replace("gorm:update_time_stamp", updateTimestampForCreateCallback)
